@@ -1,0 +1,15 @@
+dataset:
+  parallel: 4
+  root: /share/images
+  step:
+    - align
+    - crop
+    - scale
+
+class_info:
+  name: '812'
+  students: ['81201', '81202', '81203']
+
+students:
+  - name: Alice
+    age: 20

@@ -1,0 +1,17 @@
+language: python
+python:
+  - '3.6'
+install:
+  - pip install -r requirements.txt
+  - pip install flake8
+script:
+  - python test_yaml_to_object.py
+  - python -m flake8
+deploy:
+  provider: pypi
+  user: sfzhou
+  on:
+    branch: master
+  password:
+    secure: pfqQmuTXxtDWxxgr5dVpk6LQZfkoTP2eH823782nHsQRtW0MO2Hs1kQS+jgeDNH/Vzu7umGWpW4NdkhEyrCBMMtLxzLl92Z7bH03DQXj/6jDR87TVymgd1HRjX9Xpj7pFlBC5h7tSTFsDd9sPkBVrMGLnFjz+2ID01FAr423BG5nhTqa3gn9mlP7KOqOMOvNpmTRekSaaysjvrJ00mJMMSYaWIVdP4DRPq9kTBzNI81AvPNrEKpuHG4CgU0o3KLswqTm6ECJcTpwUiBXF5tZ+7/RBwYCUROqqYkF0KYnhVrjCTedPK60LSr9/FGPHNs9kQEuxj+7QvGbC3fcUlPwYpKYwBCNk0OvtrTi3t/pDZOzFZ8A01bfCPrT/kUUqlT+XGXmnA2vkArXw8chsv6cSXfMLgCfJzmoYu3BRcK0t4d6zqUb8OZxTvHuns3ypvYkDNwSqk2AUpdKEnbyNlw88rdt7XRXjvZ/XjnlcYgqAhgJAon+wOr39edYIiF59qjrWmLsPFl++UUNty+LohadQdQbt5IkA16o9uklaNOvI+mxL2pe9iqHjNrvaavhuOtN/lDPzmu4NEUOGX5OoA3Hvi6GSd/Nkvvr+5TcMvB+3jXuGXDlcyXygmo5rdHR5F9oeO8SNdYJWqR1tksd9tyytopbpdf/Uz0hTTr0g/4N99E=
+  skip_existing: true
